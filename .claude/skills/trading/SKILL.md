@@ -23,6 +23,9 @@ argument-hint: "[modul] [argumente]  z. B. copycat berkshire --top 5"
 Ein Skill, elf Module. Jedes Modul hat einen eigenen Leitfaden (`GUIDE.md`)
 und ein Python-Werkzeug (nur Standardbibliothek, Python 3.8+) in seinem
 Unterordner. `${CLAUDE_SKILL_DIR}` ist dieser Ordner (wo diese SKILL.md liegt).
+Ist die Variable nicht gesetzt (z. B. in der Claude-App), setze sie selbst auf
+diesen Ordner, etwa `export CLAUDE_SKILL_DIR=/mnt/skills/user/trading`, und
+pruefe den Pfad vorher mit `ls`.
 
 Antworte in der Sprache des Nutzers.
 
