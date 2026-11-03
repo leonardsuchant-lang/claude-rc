@@ -1,5 +1,5 @@
 ---
-name: traiding
+name: trading
 description: >-
   Trading-Komplettpaket in einem Skill: elf Module unter einem Befehl.
   copycat (13F eines Investors nachbauen, z. B. Buffett/Berkshire kopieren),
@@ -11,14 +11,14 @@ description: >-
   Ticket fuer den Broker-Connector, nur nach deinem Ja), tax (Steuer-Lots,
   Tax-Loss-Harvesting, Wash Sales), alerts (Kursalarme, NYSE-Handelszeiten,
   Kurse holen) und rebalance (Portfolio zurueck auf Zielgewichte). Verwenden,
-  wenn der Nutzer "/traiding" schreibt oder etwas zu Aktien, Depot, Portfolio,
+  wenn der Nutzer "/trading" schreibt oder etwas zu Aktien, Depot, Portfolio,
   13F, Buffett kopieren, Pelosi, Kongress-Trades, Nachrichten zu Aktien,
   Earnings, Screening, Order, Broker, Alpaca, Risiko, Steuer, Kursalarm,
   Marktoeffnung oder Rebalancing sagt.
 argument-hint: "[modul] [argumente]  z. B. copycat berkshire --top 5"
 ---
 
-# traiding
+# trading
 
 Ein Skill, elf Module. Jedes Modul hat einen eigenen Leitfaden (`GUIDE.md`)
 und ein Python-Werkzeug (nur Standardbibliothek, Python 3.8+) in seinem
@@ -36,7 +36,7 @@ Antworte in der Sprache des Nutzers.
 2. **Leitfaden lesen.** Lies `${CLAUDE_SKILL_DIR}/<modul>/GUIDE.md` vollstaendig,
    bevor du etwas ausfuehrst, und folge ihm. Lies nur die Leitfaeden, die du
    gerade brauchst.
-3. **Weiterreichen.** Wo ein Leitfaden auf `/traiding <modul>` verweist, ist
+3. **Weiterreichen.** Wo ein Leitfaden auf `/trading <modul>` verweist, ist
    damit das jeweilige Modul gemeint: lies dessen `GUIDE.md` und mach dort
    weiter, wenn der Nutzer das will.
 

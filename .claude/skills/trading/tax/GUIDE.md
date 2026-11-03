@@ -1,11 +1,11 @@
-# traiding tax
+# trading tax
 
 The Tax Optimizer does the arithmetic on the user's lots so nobody sells
 blind. It never decides what is right for the user's taxes. **This is not tax
 advice**: a tax professional decides what applies to them. Say that once,
 early, in every answer that uses this skill.
 
-`${CLAUDE_SKILL_DIR}` below is the `traiding` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/tax/`.
+`${CLAUDE_SKILL_DIR}` below is the `trading` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/tax/`.
 
 ```bash
 python3 "${CLAUDE_SKILL_DIR}/tax/lots.py" report --lots              # every lot, gain or loss, term
@@ -54,8 +54,8 @@ purchase dates and costs. Never invent a cost basis.
    user wants a percent threshold). For each candidate show the estimated
    loss, short and long term split, any wash-sale conflict, and the first day
    they could buy it back. Candidates with a conflict are not proposed.
-4. Only if the user wants proposals: `harvest --write`, then `/traiding risk`,
-   then `/traiding broker`, one yes per order.
+4. Only if the user wants proposals: `harvest --write`, then `/trading risk`,
+   then `/trading broker`, one yes per order.
 5. After a sale fills, `lots.py sell ... --record` updates the lots and logs
    the realized result for the year.
 

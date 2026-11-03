@@ -1,17 +1,17 @@
 # claude-rc
 
-## `/traiding`: ein Skill für alles rund ums Trading
+## `/trading`: ein Skill für alles rund ums Trading
 
 Die elf Skills aus dem Paket "trader-skill" (MIT, Jake Schincariol) sind hier
-zu einem einzigen Projekt-Skill zusammengefasst: `.claude/skills/traiding/`.
+zu einem einzigen Projekt-Skill zusammengefasst: `.claude/skills/trading/`.
 
 ```
-/traiding                         Übersicht der Module
-/traiding copycat berkshire --top 5
-/traiding news AAPL KO
-/traiding budget 5000
-/traiding risk
-/traiding broker
+/trading                         Übersicht der Module
+/trading copycat berkshire --top 5
+/trading news AAPL KO
+/trading budget 5000
+/trading risk
+/trading broker
 ```
 
 Module: `copycat`, `news`, `budget`, `pelosi`, `analyst`, `screener`, `risk`,
@@ -26,7 +26,7 @@ Standard. Daten landen im Ordner `trader/` (per `.gitignore` ausgeschlossen).
 Global installieren statt nur für dieses Projekt:
 
 ```bash
-cp -r .claude/skills/traiding ~/.claude/skills/
+cp -r .claude/skills/trading ~/.claude/skills/
 ```
 
 Tests (offline):

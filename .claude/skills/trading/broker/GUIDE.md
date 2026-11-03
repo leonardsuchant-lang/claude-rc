@@ -1,4 +1,4 @@
-# traiding broker
+# trading broker
 
 The Order Executor is the only skill in this pack that can lead to a real
 order, so it is the strictest. An order reaches the market only after three
@@ -11,7 +11,7 @@ separate gates, every time, for every order:
 
 Two yeses from the user, one PASS from the rules. No yes, no order.
 
-`${CLAUDE_SKILL_DIR}` below is the `traiding` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/broker/`.
+`${CLAUDE_SKILL_DIR}` below is the `trading` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/broker/`.
 
 ```bash
 python3 "${CLAUDE_SKILL_DIR}/broker/ticket.py" show                     # every ticket, READY or not
@@ -95,7 +95,7 @@ to Needs approval too.
 ## Steps, for each order
 
 1. `ticket.py show`. Only READY tickets go to the user. A ticket that is NOT
-   READY or BLOCKED goes back to `/traiding risk`.
+   READY or BLOCKED goes back to `/trading risk`.
 2. Show ONE ticket and ask: "Place this order? Reply yes or no." One order
    per question. Never offer "yes to all".
 3. Run `ticket.py approve --index N --reply "<the user's reply, word for word>"`.

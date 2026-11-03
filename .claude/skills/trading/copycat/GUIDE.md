@@ -1,4 +1,4 @@
-# traiding copycat
+# trading copycat
 
 Copying an investor starts with what they are legally required to show: a
 13F-HR, filed with the SEC every quarter by any investment manager with over
@@ -97,7 +97,7 @@ python3 "${CLAUDE_SKILL_DIR}/copycat/edgar13f.py" copy 1067983 --top 5 --out tra
 Share classes are combined by default (`--separate` keeps them apart).
 `--exclude TICKER` leaves out what the user will not own, `--min-pct 1` drops
 crumbs. The weights are each position's % of the 13F scaled so the chosen
-ones sum to 100. Show the table, then hand off to `/traiding budget`.
+ones sum to 100. Show the table, then hand off to `/trading budget`.
 
 Form 4 (optional): insiders and 10% owners report their trades within two
 business days on Form 4. To see them, open
@@ -123,7 +123,7 @@ Rounded, that is 30.7 / 23.9 / 17.6 / 15.1 / 12.8. Since the quarter before:
 new D.R. Horton (3,564 shares), sold out of Constellation Brands, added
 Alphabet, Delta, Lennar, Macy's and the New York Times, trimmed Bank of
 America, Kroger, Capital One, Nucor, Ally and DaVita. Then: "These are
-Berkshire's holdings as of June 30, 2026. Next, /traiding budget sizes them to
+Berkshire's holdings as of June 30, 2026. Next, /trading budget sizes them to
 your $5,000."
 
 ## What it never does
@@ -141,8 +141,8 @@ your $5,000."
 - Education and tooling, not financial advice. Nothing in this pack is a
   recommendation to buy or sell anything.
 - Paper trading by default (`"paper": true` in `trader/config.json`).
-- Nothing places an order except `/traiding broker`, and only after
-  `/traiding risk` passes AND the user types an explicit yes for that order in
+- Nothing places an order except `/trading broker`, and only after
+  `/trading risk` passes AND the user types an explicit yes for that order in
   the chat, AND the brokerage tool is set to "Needs approval" in Claude
   (Customize > Connectors > tool permissions) so Claude's own "Allow once /
   Deny" card appears too. Never "Always allow" an order tool.

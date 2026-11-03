@@ -1,10 +1,10 @@
-# traiding alerts
+# trading alerts
 
 Price Alerts watches the numbers so the user does not have to. An alert is
 information, never an order: when a stop rings, nothing is sold. If the user
 wants to act, the normal path runs (size, risk, their yes).
 
-`${CLAUDE_SKILL_DIR}` below is the `traiding` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/alerts/`.
+`${CLAUDE_SKILL_DIR}` below is the `trading` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/alerts/`.
 
 ```bash
 python3 "${CLAUDE_SKILL_DIR}/alerts/alerts.py" clock                         # NYSE open or closed, next open
@@ -72,7 +72,7 @@ files. For any other year it says the holiday list is unknown.
    task or cron, every 15 minutes in market hours is plenty). Each run fetches
    only the tickers in the rules and rings each alert once.
 3. Tell the user what rang in one line each. If they want to act, send them
-   to sizing and `/traiding risk`. Never act for them.
+   to sizing and `/trading risk`. Never act for them.
 
 ## Example: the reel's portfolio
 

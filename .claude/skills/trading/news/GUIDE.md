@@ -1,4 +1,4 @@
-# traiding news
+# trading news
 
 A position you hold can change in a minute: an earnings miss, a CEO leaving,
 a lawsuit, a restatement. This skill reads the two feeds that carry those
@@ -13,7 +13,7 @@ python3 "${CLAUDE_SKILL_DIR}/news/news.py" --help
 ## What it reads and writes
 
 - Your tickers: `--tickers`, else `trader/portfolio.json` positions, else
-  `trader/targets.json` weights (so it works right after `/traiding copycat`).
+  `trader/targets.json` weights (so it works right after `/trading copycat`).
 - Headlines: Yahoo Finance's public headline RSS, one feed per ticker
   (`https://feeds.finance.yahoo.com/rss/2.0/headline?s=AAPL&region=US&lang=en-US`).
 - Filings: SEC EDGAR's company Atom feed, 8-K by default (`--forms 8-K,10-Q`
@@ -58,10 +58,10 @@ python3 "${CLAUDE_SKILL_DIR}/news/news.py" --help
    one line on why it matters to this portfolio (its weight, from
    `trader/targets.json` or `trader/portfolio.json`).
 4. If a story might change the plan (an 8-K 4.02 restatement, a delisting
-   notice), say so and suggest `/traiding analyst` for the numbers or
-   `/traiding risk` to recheck pending orders. Never act on a headline alone.
+   notice), say so and suggest `/trading analyst` for the numbers or
+   `/trading risk` to recheck pending orders. Never act on a headline alone.
 
-To run it on a schedule, use `/loop 30m /traiding news` during market hours or
+To run it on a schedule, use `/loop 30m /trading news` during market hours or
 a scheduled task each morning.
 
 ## Example: the reel's portfolio
@@ -87,5 +87,5 @@ a ticker has no news, say so rather than padding the brief.
 ## Safety
 
 Education and tooling, not financial advice. This skill only reads and
-reports. Nothing places an order except `/traiding broker`, after
-`/traiding risk` passes and the user types an explicit yes for that order.
+reports. Nothing places an order except `/trading broker`, after
+`/trading risk` passes and the user types an explicit yes for that order.

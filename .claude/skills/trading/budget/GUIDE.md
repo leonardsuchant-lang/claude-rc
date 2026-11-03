@@ -1,10 +1,10 @@
-# traiding budget
+# trading budget
 
 The Budget Manager turns "copy this portfolio" into "buy exactly this much of
 each", inside rules the user sets once. It writes proposals only. trader-risk
 checks them and trader-broker asks the user yes or no for each one.
 
-`${CLAUDE_SKILL_DIR}` below is the `traiding` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/budget/`.
+`${CLAUDE_SKILL_DIR}` below is the `trading` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/budget/`.
 
 ```bash
 python3 "${CLAUDE_SKILL_DIR}/budget/size.py"                       # trader/targets.json + trader/config.json
@@ -55,7 +55,7 @@ cap, or whole shares that do not divide evenly) is shown as "left idle".
 Show the table: ticker, weight, dollars, which stock hit the cap, the cash
 buffer and what is left idle. Say where the weights came from and how old
 they are (a 13F is up to 45 days old when it is filed). Then hand over to
-`/traiding risk`.
+`/trading risk`.
 
 ## Example: the reel
 

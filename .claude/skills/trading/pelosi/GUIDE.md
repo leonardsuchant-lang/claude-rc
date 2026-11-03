@@ -1,4 +1,4 @@
-# traiding pelosi
+# trading pelosi
 
 Members of Congress have to report their trades, their spouse's and their
 dependent children's. The House Clerk posts every report as a PDF and lists
@@ -94,8 +94,8 @@ estate LLC). Then: "This is a public disclosure filed 28 days after the trade.
 It says what Paul Pelosi bought in July, not what anyone will buy next."
 
 If the user wants to act on it, it goes the long way: shares only (the config
-has `allow_options: false`), sized by `/traiding budget`, checked by
-`/traiding risk`, placed by `/traiding broker` only after their yes.
+has `allow_options: false`), sized by `/trading budget`, checked by
+`/trading risk`, placed by `/trading broker` only after their yes.
 
 ## The Senate: the manual route
 
@@ -128,8 +128,8 @@ does not click it or automate it. The route:
 - Education and tooling, not financial advice. Nothing in this pack is a
   recommendation to buy or sell anything.
 - Paper trading by default (`"paper": true` in `trader/config.json`).
-- Nothing places an order except `/traiding broker`, and only after
-  `/traiding risk` passes AND the user types an explicit yes for that order in
+- Nothing places an order except `/trading broker`, and only after
+  `/trading risk` passes AND the user types an explicit yes for that order in
   the chat, AND the brokerage tool is set to "Needs approval" in Claude
   (Customize > Connectors > tool permissions) so Claude's own "Allow once /
   Deny" card appears too. Never "Always allow" an order tool.

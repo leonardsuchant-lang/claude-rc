@@ -1,4 +1,4 @@
-# traiding screener
+# trading screener
 
 A screen turns "I want profitable companies that are still growing and not
 too expensive" into rules a computer can check, and shows its work: every
@@ -12,11 +12,11 @@ python3 "${CLAUDE_SKILL_DIR}/screener/screen.py" --help
 
 ## What it reads and writes
 
-- Metrics: `trader/metrics.json` from `/traiding analyst` (`facts.py --metrics`),
+- Metrics: `trader/metrics.json` from `/trading analyst` (`facts.py --metrics`),
   or any JSON list or CSV with a `ticker` column. CSV numbers may carry `$`,
   `%` and commas.
 - Prices (optional): `trader/prices.json` (`{"prices": {"AAPL": 341.27}}`,
-  any source; `/traiding alerts` writes it). With prices it adds `price`, `pe`
+  any source; `/trading alerts` writes it). With prices it adds `price`, `pe`
   (price / trailing EPS, only when EPS is positive) and `earnings_yield`.
 - Rules: a JSON file, `rules.example.json` in this folder to start from.
 - Writes `trader/shortlist.json` with `--out`: who passed, their score and
@@ -45,7 +45,7 @@ weighted average.
 
 1. Turn the user's words into rules. Ask when a threshold is vague ("cheap"
    means what P/E?). Write them to `trader/rules.json`.
-2. Get metrics for the candidates: run `/traiding analyst` on them with
+2. Get metrics for the candidates: run `/trading analyst` on them with
    `--metrics trader/metrics.json` (its `facts.py AAPL AXP GOOGL KO BAC
    --metrics trader/metrics.json`), or use the user's own CSV. Prices from
    `trader/prices.json` if P/E matters.
@@ -59,7 +59,7 @@ weighted average.
    Exit code 1 means nothing passed: say so and show the closest misses.
 4. Report the shortlist with the reasons, the misses with the numbers that
    failed, and the dates the numbers are from (the latest quarter end per
-   company, the price date). Suggest `/traiding analyst` on the top names before
+   company, the price date). Suggest `/trading analyst` on the top names before
    anything else.
 
 ## Example: the reel's five
@@ -86,10 +86,10 @@ latest 10-Q.
 - Never calls a passing company a buy. A screen is a filter on reported
   numbers, not a recommendation.
 - Never fills in a missing number or guesses a metric: missing means missing.
-- Never sends anything to `/traiding budget` or an order path by itself.
+- Never sends anything to `/trading budget` or an order path by itself.
 
 ## Safety
 
 Education and tooling, not financial advice. This skill only filters numbers.
-Nothing places an order except `/traiding broker`, after `/traiding risk` passes
+Nothing places an order except `/trading broker`, after `/trading risk` passes
 and the user types an explicit yes for that order.

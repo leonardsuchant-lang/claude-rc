@@ -1,4 +1,4 @@
-# traiding analyst
+# trading analyst
 
 Earnings season moves stocks, and the press release is written to put the
 best number first. This skill reads the numbers the company actually filed
@@ -23,7 +23,7 @@ email. It refuses to call SEC without one.
   (the EX-99.1 exhibit).
 - Writes `trader/metrics.json` with `--metrics`: one row per company (TTM
   revenue, net income and diluted EPS, the latest margins and growth) for
-  `/traiding screener`. `metrics.example.json` in this folder is a real run
+  `/trading screener`. `metrics.example.json` in this folder is a real run
   for AAPL, AXP, GOOGL, KO and BAC on 2026-10-13.
 
 ## The rules
@@ -85,5 +85,5 @@ so the summary reads that 10-Q directly.
 ## Safety
 
 Education and tooling, not financial advice. This skill only reads filings.
-Nothing places an order except `/traiding broker`, after `/traiding risk` passes
+Nothing places an order except `/trading broker`, after `/trading risk` passes
 and the user types an explicit yes for that order.

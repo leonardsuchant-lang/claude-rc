@@ -1,11 +1,11 @@
-# traiding risk
+# trading risk
 
 The Risk Manager is the gate between a proposal and the broker. Every order
 written by trader-budget, trader-rebalance or trader-tax passes through it.
 A BLOCK is final for that order: it does not go to the user for a yes, and
 it does not go to the broker.
 
-`${CLAUDE_SKILL_DIR}` below is the `traiding` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/risk/`.
+`${CLAUDE_SKILL_DIR}` below is the `trading` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/risk/`.
 
 ```bash
 python3 "${CLAUDE_SKILL_DIR}/risk/check.py"             # trader/ files; writes trader/state/risk.json

@@ -1,4 +1,4 @@
-# traiding rebalance
+# trading rebalance
 
 The Rebalancer keeps the portfolio looking like the plan. Prices move, new
 money arrives and a new 13F changes the weights; this skill finds the stocks
@@ -6,7 +6,7 @@ that drifted too far and proposes the trades that bring them back. It writes
 proposals only: trader-risk checks them and trader-broker asks the user yes
 or no for each one.
 
-`${CLAUDE_SKILL_DIR}` below is the `traiding` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/rebalance/`.
+`${CLAUDE_SKILL_DIR}` below is the `trading` skill folder (where its SKILL.md lives); this module's files are in `${CLAUDE_SKILL_DIR}/rebalance/`.
 
 ```bash
 python3 "${CLAUDE_SKILL_DIR}/rebalance/rebalance.py"                    # the drift table, no files written
@@ -50,8 +50,8 @@ python3 "${CLAUDE_SKILL_DIR}/rebalance/rebalance.py" --json
    are over or under, by how many points, and what it would trade.
 3. Before any sell, run trader-tax (`lots.py sell TICKER SHARES`) and show
    what the sale would realize. Selling a winner can mean a tax bill.
-4. If the user wants the trades: `rebalance.py --write`, then `/traiding risk`,
-   then `/traiding broker`, one yes per order.
+4. If the user wants the trades: `rebalance.py --write`, then `/trading risk`,
+   then `/trading broker`, one yes per order.
 
 ## Example: the reel's portfolio
 

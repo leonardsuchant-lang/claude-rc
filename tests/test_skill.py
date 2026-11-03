@@ -20,7 +20,7 @@ class Skill(unittest.TestCase):
         text = read("SKILL.md")
         m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
         self.assertIsNotNone(m)
-        self.assertIn("name: traiding\n", m.group(1) + "\n")
+        self.assertIn("name: trading\n", m.group(1) + "\n")
         self.assertIn("description: ", m.group(1))
 
     def test_every_module_has_guide_and_tool(self):
